@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn Japanese</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="" class="cs-logo" aria-label="back to home">
+            <img src="../images/cherry-blossom.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="#hero-229" class="cs-li-link cs-active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#services-1498" class="cs-li-link cs-active">
+                            Courses
+                        </a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">
+                            Lessons
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="#Vocab" class="cs-li-link cs-drop-link">Vocabulary</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="#Kanji" class="cs-li-link cs-drop-link">Kanji</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="#Grammar" class="cs-li-link cs-drop-link">Grammar</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="#Reading" class="cs-li-link cs-drop-link">Reading</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="#Listening" class="cs-li-link cs-drop-link">Listening</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="#Extra" class="cs-li-link cs-drop-link">Extra Lessons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#meet-team-220" class="cs-li-link">
+                            About
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#contact" class="cs-li-link">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="cs-contact-group">
+            <a href="tel:+84 1985 33 999" class="cs-phone">
+                <img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
+                +84 1985 33 999
+            </a>
+            <div class="cs-social">
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+            </div>
+        </div>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+    </div>
+</header>
+                                
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-229">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            <span class="cs-topper">Japanese learning site</span>
+            <h1 class="cs-title">       <!-- cs-title -->
+                Your journey to mastering Japanese starts here</h1>
+            <p class="cs-topper">       <!--cs-text -->
+                Join our community and enhance your Japanese language skills with interactive lessons, engaging resources, and comprehensive quizzes.
+            </p>
+            <a href="#explore-more" class="cs-button-solid">Explore More</a>
+            <a href="#services-1498" class="cs-button-transparent">
+                <img class="cs-img" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg" alt="play icon" width="17" height="17">
+                    to Lessons    
+            </a>
+        </div>
+        
+    </div>
+                     
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1498">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title-a" >Lessons</h1>
+            <h2 class="cs-title-p">You can study to your heart's content.</h2>
+            <p class="cs-text">
+                We promise that your skills will improve after completing all the lessons.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)"
+                            srcset="../images/forService/forVocabulary.jpg" />
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)"
+                            srcset="../images/forService/forVocabulary.jpg" />
+                        <img loading="lazy" decoding="async"
+                            src="../images/forService/forVocabulary.jpg" alt="kids"
+                            width="413" height="240" aria-hidden="true" />
+                    </picture>
+                    <!--SVG Mask-->
+                    <svg class="cs-mask" id="Layer_2-1498" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 209"><defs><style>.cls-1{fill:none;stroke:var(--maskBorder);stroke-width:8px;}.cls-2,.cls-3{fill:var(--maskBG);stroke-width:0px;}.cls-3{fill-rule:evenodd;}</style></defs><g id="Layer_1-2-1498"><polygon class="cls-2" points="0 0 267 0 267 97.57 261.9 96.44 254.23 31.4 246.08 17.19 239.14 11.22 222 5.16 196.11 5.16 26.01 8.58 15.9 14.37 8.36 53.13 4.98 74.89 3.92 107.77 3.35 113.06 0 113.06 0 0"/><polygon class="cls-2" points="0 209 267 209 267 96.06 261.9 96.44 260.17 112.12 259.45 130.79 255.36 164.41 248.83 184.12 245.63 192.64 236.74 196.78 211.04 193.94 180.05 193.57 142.62 192.82 56.27 199.8 38.87 202.95 27.54 204.09 23.82 197.54 14.13 186.76 9.59 164.54 4.98 108.52 0 107.96 0 209"/><path class="cls-3" d="m7.98,55.76c1.17-11.05,2.57-21.17,4-29.72C14.68,9.8,19.1,7.55,30.98,7.04H7.98v48.72Zm0,99.31v45.97h15.85c-.31-.29-.6-.62-.85-1-7.58-11.22-12.3-27.06-15-44.97Zm45.14,45.97h205.86v-66.15c-.48,4.57-.99,9.12-1.5,13.68-.17,1.49-.33,2.98-.5,4.47-1.41,12.9-4.14,24.28-8,34-2.17,5.43-5.36,8.48-10,8-62.85-6.44-123.94-2.01-185.86,6ZM258.98,49.82V7.04h-25.8c10.43,4.14,18.6,12.97,22.8,29,1.2,4.59,2.19,9.19,3,13.78Z"/><path class="cls-1" d="m11.98,27.07c-7.61,45.4-14.6,135.31,11,172.99,1,1.49,2.58,2.27,4,2.98,1.42.72,2.48,1.22,4,.99,69.54-9.75,137.68-16.11,208-8.95,4.64.48,7.83-2.56,10-7.95,3.86-9.66,6.59-20.97,8-33.8,4.29-38.45,9.25-77.33-1-116.32-6.31-23.95-21.59-31.73-40-31.81-76.24-.28-138.07.98-185,2.98-11.87.51-16.3,2.74-19,18.89Z"/></g></svg>
+                </div>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Vocabulary</h3>
+                    <span class="cs-ages">(N2)</span>
+                    <p class="cs-item-text">
+                        Enhance your Japanese vocabulary with our comprehensive N2 level lessons, designed to expand your word knowledge and improve your fluency.
+                    </p>
+                    <a href="#Vocab" class="cs-link">
+                        start lessons
+                        <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                            width="20" height="20" aria-hidden="true" />
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)"
+                            srcset="../images/forService/forKanji.jpg" />
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)"
+                            srcset="../images/forService/forKanji.jpg" />
+                        <img loading="lazy" decoding="async"
+                            src="../images/forService/forKanji.jpg" alt="kids"
+                            width="413" height="240" aria-hidden="true" />
+                    </picture>
+                    <!--SVG Mask-->
+                    <svg class="cs-mask" id="Layer_2-1498" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 209"><defs><style>.cls-1{fill:none;stroke:var(--maskBorder);stroke-width:8px;}.cls-2,.cls-3{fill:var(--maskBG);stroke-width:0px;}.cls-3{fill-rule:evenodd;}</style></defs><g id="Layer_1-2-1498"><polygon class="cls-2" points="0 0 267 0 267 97.57 261.9 96.44 254.23 31.4 246.08 17.19 239.14 11.22 222 5.16 196.11 5.16 26.01 8.58 15.9 14.37 8.36 53.13 4.98 74.89 3.92 107.77 3.35 113.06 0 113.06 0 0"/><polygon class="cls-2" points="0 209 267 209 267 96.06 261.9 96.44 260.17 112.12 259.45 130.79 255.36 164.41 248.83 184.12 245.63 192.64 236.74 196.78 211.04 193.94 180.05 193.57 142.62 192.82 56.27 199.8 38.87 202.95 27.54 204.09 23.82 197.54 14.13 186.76 9.59 164.54 4.98 108.52 0 107.96 0 209"/><path class="cls-3" d="m7.98,55.76c1.17-11.05,2.57-21.17,4-29.72C14.68,9.8,19.1,7.55,30.98,7.04H7.98v48.72Zm0,99.31v45.97h15.85c-.31-.29-.6-.62-.85-1-7.58-11.22-12.3-27.06-15-44.97Zm45.14,45.97h205.86v-66.15c-.48,4.57-.99,9.12-1.5,13.68-.17,1.49-.33,2.98-.5,4.47-1.41,12.9-4.14,24.28-8,34-2.17,5.43-5.36,8.48-10,8-62.85-6.44-123.94-2.01-185.86,6ZM258.98,49.82V7.04h-25.8c10.43,4.14,18.6,12.97,22.8,29,1.2,4.59,2.19,9.19,3,13.78Z"/><path class="cls-1" d="m11.98,27.07c-7.61,45.4-14.6,135.31,11,172.99,1,1.49,2.58,2.27,4,2.98,1.42.72,2.48,1.22,4,.99,69.54-9.75,137.68-16.11,208-8.95,4.64.48,7.83-2.56,10-7.95,3.86-9.66,6.59-20.97,8-33.8,4.29-38.45,9.25-77.33-1-116.32-6.31-23.95-21.59-31.73-40-31.81-76.24-.28-138.07.98-185,2.98-11.87.51-16.3,2.74-19,18.89Z"/></g></svg>
+                </div>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Kanji</h3>
+                    <span class="cs-ages">(N2)</span>
+                    <p class="cs-item-text">
+                        Enhance your Japanese Kanji with our comprehensive N2 level lessons, designed to expand your word knowledge and improve your fluency.
+                    </p>
+                    <a href="#Kanji" class="cs-link">
+                        start lessons
+                        <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                            width="20" height="20" aria-hidden="true" />
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)"
+                            srcset="../images/forService/forGrammer.jpg" />
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)"
+                            srcset="../images/forService/forGrammer.jpg" />
+                        <img loading="lazy" decoding="async"
+                            src="../images/forService/forGrammer.jpg" alt="kids"
+                            width="213" height="170" aria-hidden="true" />
+                    </picture>
+                    <!--SVG Mask-->
+                    <svg class="cs-mask" id="Layer_2-1498" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 209"><defs><style>.cls-1{fill:none;stroke:var(--maskBorder);stroke-width:8px;}.cls-2,.cls-3{fill:var(--maskBG);stroke-width:0px;}.cls-3{fill-rule:evenodd;}</style></defs><g id="Layer_1-2-1498"><polygon class="cls-2" points="0 0 267 0 267 97.57 261.9 96.44 254.23 31.4 246.08 17.19 239.14 11.22 222 5.16 196.11 5.16 26.01 8.58 15.9 14.37 8.36 53.13 4.98 74.89 3.92 107.77 3.35 113.06 0 113.06 0 0"/><polygon class="cls-2" points="0 209 267 209 267 96.06 261.9 96.44 260.17 112.12 259.45 130.79 255.36 164.41 248.83 184.12 245.63 192.64 236.74 196.78 211.04 193.94 180.05 193.57 142.62 192.82 56.27 199.8 38.87 202.95 27.54 204.09 23.82 197.54 14.13 186.76 9.59 164.54 4.98 108.52 0 107.96 0 209"/><path class="cls-3" d="m7.98,55.76c1.17-11.05,2.57-21.17,4-29.72C14.68,9.8,19.1,7.55,30.98,7.04H7.98v48.72Zm0,99.31v45.97h15.85c-.31-.29-.6-.62-.85-1-7.58-11.22-12.3-27.06-15-44.97Zm45.14,45.97h205.86v-66.15c-.48,4.57-.99,9.12-1.5,13.68-.17,1.49-.33,2.98-.5,4.47-1.41,12.9-4.14,24.28-8,34-2.17,5.43-5.36,8.48-10,8-62.85-6.44-123.94-2.01-185.86,6ZM258.98,49.82V7.04h-25.8c10.43,4.14,18.6,12.97,22.8,29,1.2,4.59,2.19,9.19,3,13.78Z"/><path class="cls-1" d="m11.98,27.07c-7.61,45.4-14.6,135.31,11,172.99,1,1.49,2.58,2.27,4,2.98,1.42.72,2.48,1.22,4,.99,69.54-9.75,137.68-16.11,208-8.95,4.64.48,7.83-2.56,10-7.95,3.86-9.66,6.59-20.97,8-33.8,4.29-38.45,9.25-77.33-1-116.32-6.31-23.95-21.59-31.73-40-31.81-76.24-.28-138.07.98-185,2.98-11.87.51-16.3,2.74-19,18.89Z"/></g></svg>
+                </div>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Grammar</h3>
+                    <span class="cs-ages">(N2)</span>
+                    <p class="cs-item-text">
+                        Enhance your Japanese Grammer with our comprehensive N2 level lessons, designed to expand your word knowledge and improve your fluency.
+                    </p>
+                    <a href="#Grammar" class="cs-link">
+                        start Lessons
+                        <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                            width="20" height="20" aria-hidden="true" />
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)"
+                            srcset="../images/forService/forReading.jpg" />
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)"
+                            srcset="../images/forService/forReading.jpg" />
+                        <img loading="lazy" decoding="async"
+                            src="../images/forService/forReading.jpg" alt="kids"
+                            width="413" height="240" aria-hidden="true" />
+                    </picture>
+                    <!--SVG Mask-->
+                    <svg class="cs-mask" id="Layer_2-1498" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 209"><defs><style>.cls-1{fill:none;stroke:var(--maskBorder);stroke-width:8px;}.cls-2,.cls-3{fill:var(--maskBG);stroke-width:0px;}.cls-3{fill-rule:evenodd;}</style></defs><g id="Layer_1-2-1498"><polygon class="cls-2" points="0 0 267 0 267 97.57 261.9 96.44 254.23 31.4 246.08 17.19 239.14 11.22 222 5.16 196.11 5.16 26.01 8.58 15.9 14.37 8.36 53.13 4.98 74.89 3.92 107.77 3.35 113.06 0 113.06 0 0"/><polygon class="cls-2" points="0 209 267 209 267 96.06 261.9 96.44 260.17 112.12 259.45 130.79 255.36 164.41 248.83 184.12 245.63 192.64 236.74 196.78 211.04 193.94 180.05 193.57 142.62 192.82 56.27 199.8 38.87 202.95 27.54 204.09 23.82 197.54 14.13 186.76 9.59 164.54 4.98 108.52 0 107.96 0 209"/><path class="cls-3" d="m7.98,55.76c1.17-11.05,2.57-21.17,4-29.72C14.68,9.8,19.1,7.55,30.98,7.04H7.98v48.72Zm0,99.31v45.97h15.85c-.31-.29-.6-.62-.85-1-7.58-11.22-12.3-27.06-15-44.97Zm45.14,45.97h205.86v-66.15c-.48,4.57-.99,9.12-1.5,13.68-.17,1.49-.33,2.98-.5,4.47-1.41,12.9-4.14,24.28-8,34-2.17,5.43-5.36,8.48-10,8-62.85-6.44-123.94-2.01-185.86,6ZM258.98,49.82V7.04h-25.8c10.43,4.14,18.6,12.97,22.8,29,1.2,4.59,2.19,9.19,3,13.78Z"/><path class="cls-1" d="m11.98,27.07c-7.61,45.4-14.6,135.31,11,172.99,1,1.49,2.58,2.27,4,2.98,1.42.72,2.48,1.22,4,.99,69.54-9.75,137.68-16.11,208-8.95,4.64.48,7.83-2.56,10-7.95,3.86-9.66,6.59-20.97,8-33.8,4.29-38.45,9.25-77.33-1-116.32-6.31-23.95-21.59-31.73-40-31.81-76.24-.28-138.07.98-185,2.98-11.87.51-16.3,2.74-19,18.89Z"/></g></svg>
+                </div>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Reading</h3>
+                    <span class="cs-ages">(N2)</span>
+                    <p class="cs-item-text">
+                        Enhance your Japanese Reading with our comprehensive N2 level lessons, designed to expand your word knowledge and improve your fluency.
+                    </p>
+                    <a href="#Reading" class="cs-link">
+                        start Lessons
+                        <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                            width="20" height="20" aria-hidden="true" />
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)"
+                            srcset="../images/forService/forListening.jpg" />
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)"
+                            srcset="../images/forService/forListening.jpg" />
+                        <img loading="lazy" decoding="async"
+                            src="../images/forService/forListening.jpg" alt="kids"
+                            width="413" height="240" aria-hidden="true" />
+                    </picture>
+                    <!--SVG Mask-->
+                    <svg class="cs-mask" id="Layer_2-1498" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 209"><defs><style>.cls-1{fill:none;stroke:var(--maskBorder);stroke-width:8px;}.cls-2,.cls-3{fill:var(--maskBG);stroke-width:0px;}.cls-3{fill-rule:evenodd;}</style></defs><g id="Layer_1-2-1498"><polygon class="cls-2" points="0 0 267 0 267 97.57 261.9 96.44 254.23 31.4 246.08 17.19 239.14 11.22 222 5.16 196.11 5.16 26.01 8.58 15.9 14.37 8.36 53.13 4.98 74.89 3.92 107.77 3.35 113.06 0 113.06 0 0"/><polygon class="cls-2" points="0 209 267 209 267 96.06 261.9 96.44 260.17 112.12 259.45 130.79 255.36 164.41 248.83 184.12 245.63 192.64 236.74 196.78 211.04 193.94 180.05 193.57 142.62 192.82 56.27 199.8 38.87 202.95 27.54 204.09 23.82 197.54 14.13 186.76 9.59 164.54 4.98 108.52 0 107.96 0 209"/><path class="cls-3" d="m7.98,55.76c1.17-11.05,2.57-21.17,4-29.72C14.68,9.8,19.1,7.55,30.98,7.04H7.98v48.72Zm0,99.31v45.97h15.85c-.31-.29-.6-.62-.85-1-7.58-11.22-12.3-27.06-15-44.97Zm45.14,45.97h205.86v-66.15c-.48,4.57-.99,9.12-1.5,13.68-.17,1.49-.33,2.98-.5,4.47-1.41,12.9-4.14,24.28-8,34-2.17,5.43-5.36,8.48-10,8-62.85-6.44-123.94-2.01-185.86,6ZM258.98,49.82V7.04h-25.8c10.43,4.14,18.6,12.97,22.8,29,1.2,4.59,2.19,9.19,3,13.78Z"/><path class="cls-1" d="m11.98,27.07c-7.61,45.4-14.6,135.31,11,172.99,1,1.49,2.58,2.27,4,2.98,1.42.72,2.48,1.22,4,.99,69.54-9.75,137.68-16.11,208-8.95,4.64.48,7.83-2.56,10-7.95,3.86-9.66,6.59-20.97,8-33.8,4.29-38.45,9.25-77.33-1-116.32-6.31-23.95-21.59-31.73-40-31.81-76.24-.28-138.07.98-185,2.98-11.87.51-16.3,2.74-19,18.89Z"/></g></svg>
+                </div>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Listening</h3>
+                    <span class="cs-ages">(N2)</span>
+                    <p class="cs-item-text">
+                        Enhance your Japanese Listening with our comprehensive N2 level lessons, designed to expand your word knowledge and improve your fluency.
+                    </p>
+                    <a href="#Listening" class="cs-link">
+                        start Lessons
+                        <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                            width="20" height="20" aria-hidden="true" />
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)"
+                            srcset="../images/forService/forExtra.jpg" />
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)"
+                            srcset="../images/forService/forExtra.jpg" />
+                        <img loading="lazy" decoding="async"
+                            src="../images/forService/forExtra.jpg" alt="kids"
+                            width="413" height="240" aria-hidden="true" />
+                    </picture>
+                    <!--SVG Mask-->
+                    <svg class="cs-mask" id="Layer_2-1498" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 209"><defs><style>.cls-1{fill:none;stroke:var(--maskBorder);stroke-width:8px;}.cls-2,.cls-3{fill:var(--maskBG);stroke-width:0px;}.cls-3{fill-rule:evenodd;}</style></defs><g id="Layer_1-2-1498"><polygon class="cls-2" points="0 0 267 0 267 97.57 261.9 96.44 254.23 31.4 246.08 17.19 239.14 11.22 222 5.16 196.11 5.16 26.01 8.58 15.9 14.37 8.36 53.13 4.98 74.89 3.92 107.77 3.35 113.06 0 113.06 0 0"/><polygon class="cls-2" points="0 209 267 209 267 96.06 261.9 96.44 260.17 112.12 259.45 130.79 255.36 164.41 248.83 184.12 245.63 192.64 236.74 196.78 211.04 193.94 180.05 193.57 142.62 192.82 56.27 199.8 38.87 202.95 27.54 204.09 23.82 197.54 14.13 186.76 9.59 164.54 4.98 108.52 0 107.96 0 209"/><path class="cls-3" d="m7.98,55.76c1.17-11.05,2.57-21.17,4-29.72C14.68,9.8,19.1,7.55,30.98,7.04H7.98v48.72Zm0,99.31v45.97h15.85c-.31-.29-.6-.62-.85-1-7.58-11.22-12.3-27.06-15-44.97Zm45.14,45.97h205.86v-66.15c-.48,4.57-.99,9.12-1.5,13.68-.17,1.49-.33,2.98-.5,4.47-1.41,12.9-4.14,24.28-8,34-2.17,5.43-5.36,8.48-10,8-62.85-6.44-123.94-2.01-185.86,6ZM258.98,49.82V7.04h-25.8c10.43,4.14,18.6,12.97,22.8,29,1.2,4.59,2.19,9.19,3,13.78Z"/><path class="cls-1" d="m11.98,27.07c-7.61,45.4-14.6,135.31,11,172.99,1,1.49,2.58,2.27,4,2.98,1.42.72,2.48,1.22,4,.99,69.54-9.75,137.68-16.11,208-8.95,4.64.48,7.83-2.56,10-7.95,3.86-9.66,6.59-20.97,8-33.8,4.29-38.45,9.25-77.33-1-116.32-6.31-23.95-21.59-31.73-40-31.81-76.24-.28-138.07.98-185,2.98-11.87.51-16.3,2.74-19,18.89Z"/></g></svg>
+                </div>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Extra Lessons</h3>
+                    <span class="cs-ages">(Intermediate-Advanced)</span>
+                    <p class="cs-item-text">
+                        Enhance your Japanese learning experience with our extra lessons. Dive into short stories and documentaries for reading practice, and improve your listening skills with curated podcasts and news segments.
+                    </p>
+                    <a href="#Extra" class="cs-link">
+                        start Now
+                        <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                            width="20" height="20" aria-hidden="true" />
+                    </a>
+                </div>
+                
+            </li>
+        </ul>
+    </div>
+    <div class="cs-wrapper">
+        <img class="cs-floater cs-floater1" loading="lazy" decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/pencil.svg" alt="icon"
+            width="253" height="470" aria-hidden="true" />
+        <img class="cs-floater cs-floater2" loading="lazy" decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/pencil2.svg" alt="icon"
+            width="203" height="452" aria-hidden="true" />
+    </div>
+    <!--SVG Hill Graphic-->
+    <svg class="cs-hills" width="1920" height="473" viewBox="0 0 1920 473" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 473H0V124.393C156.322 88.8155 463.597 0 932.085 0C1327.14 0 1826.24 60.6607 1920 124.393V473Z" fill="var(--hillBG)"/>
+    </svg>
+</section>
+ 
+
+
+<!-- =============================================== -->
+<!--                    Lessons                      -->
+<!-- =============================================== -->
+
+<section id="Vocab" class="lesson-section">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Let's start the lessons</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa libero sint hic accusantium exercitationem, voluptatem officia quaerat velit quis ullam?
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forVocab/lesson1.png" alt="icon" width="50" height="50" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lesson 1</h3>
+                <p class="cs-item-p">
+                    Relationships between Peoples.
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forVocab/lesson2.png" alt="icon" width="50" height="50" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lesson 2</h3>
+                <p class="cs-item-p">
+                    Livelihood
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forVocab/lesson3.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lesson 3</h3>
+                <p class="cs-item-p">
+                    At Home
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forVocab/lesson4.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lessons 4</h3>
+                <p class="cs-item-p">
+                    Town
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--Tire Screech-->
+    <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/tire-mark.svg" alt="icon" width="840" height="357" loading="lazy" decoding="async" aria-hidden="true">   
+</section>
+
+<section id="Kanji" class="lesson-section">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Let's start the lessons</h2>
+            <h2 class="cs-title">Kanji</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa libero sint hic accusantium exercitationem, voluptatem officia quaerat velit quis ullam?
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forKanji/注意書きicon.png" alt="icon" width="50" height="50" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">第１週(1日目)</h3>
+                <p class="cs-item-p">
+                    注意書き
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forKanji/建物の中でよく見る表示.png" alt="icon" width="50" height="50" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">第１週(2日目)</h3>
+                <p class="cs-item-p">
+                    建物の中でよく見る表示
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forKanji/建物の内外でよく見る表示.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">第１週(3日目)</h3>
+                <p class="cs-item-p">
+                    建物の内外でよく見る表示
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forKanji/駅でよく見る表示.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">第１週(4日目)</h3>
+                <p class="cs-item-p">
+                    駅でよく見る表示
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+        </ul>
+        </div>
+        <!--Tire Screech-->
+        <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/tire-mark.svg" alt="icon" width="840" height="357" loading="lazy" decoding="async" aria-hidden="true">
+</section>
+
+<section id="Grammar" class="lesson-section">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Let's start the lessons</h2>
+            <h2 class="cs-title">Grammar</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa libero sint hic accusantium exercitationem, voluptatem officia quaerat velit quis ullam?  
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forGrammar/lesson1.png" alt="icon" width="50" height="50" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lesson 1</h3>
+                <p class="cs-item-p">
+                    There are 24 grammar patterns for lesson 1.
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forGrammar/lesson2.png" alt="icon" width="50" height="50" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lesson 2</h3>
+                <p class="cs-item-p">
+                    There are 24 grammar patterns for lesson 2.
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forGrammar/lesson3.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lesson 3</h3>
+                <p class="cs-item-p">
+                    There are 23 grammar patterns for lesson 3.
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forGrammar/lesson4.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lessons 4</h3>
+                <p class="cs-item-p">
+                    There are 24 grammar patterns for lesson 4.
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+        </ul>
+        </div>
+        <!--Tire Screech-->
+        <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/tire-mark.svg" alt="icon" width="840" height="357" loading="lazy" decoding="async" aria-hidden="true">
+</section>
+
+<section id="Reading" class="lesson-section">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Let's start the lessons</h2>
+            <h2 class="cs-title">Reading</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa libero sint hic accusantium exercitationem, voluptatem officia quaerat velit quis ullam?  
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forReading/lesson1.png" alt="icon" width="50" height="50" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lesson 1</h3>
+                <p class="cs-item-p">
+                    他のものと比べる
+                </p>
+                <a href="#Reading" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forReading/lesson2.png" alt="icon" width="50" height="50" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lesson 2</h3>
+                <p class="cs-item-p">
+                    自分の意見であることを示す
+                </p>
+                <a href="#Reading" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forReading/lesson3.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lesson 3</h3>
+                <p class="cs-item-p">
+                    下線部の意味を問う
+                </p>
+                <a href="#Reading" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forReading/lesson4.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Lessons 4</h3>
+                <p class="cs-item-p">
+                    全体をつかむ
+                </p>
+                <a href="#Reading" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+        </ul>
+        </div>
+        <!--Tire Screech-->
+        <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/tire-mark.svg" alt="icon" width="840" height="357" loading="lazy" decoding="async" aria-hidden="true">
+</section>
+
+
+<section id="Listening" class="lesson-section">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Let's start the lessons</h2>
+            <h2 class="cs-title">Listening</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa libero sint hic accusantium exercitationem, voluptatem officia quaerat velit quis ullam?  
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forListening/lesson1.png" alt="icon" width="50" height="50" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons"></h3>Part-1
+                <p class="cs-item-p">
+                    Track(1-43)
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forListening/lesson2.png" alt="icon" width="50" height="50" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Part-2</h3>
+                <p class="cs-item-p">
+                    Track(44-83)
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forListening/lesson3.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Part-2</h3>
+                <p class="cs-item-p">
+                    Track(1-40)
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="../images/forLessons/forListening/lesson4.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <h3 class="cs-lessons">Part-2</h3>
+                <p class="cs-item-p">
+                    Track(41-80)
+                </p>
+                <a href="#Vocab" class="cs-link">
+                    start Lesson
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-arrow.svg" alt="icon"
+                        width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+        </ul>
+        </div>
+        <!--Tire Screech-->
+        <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/tire-mark.svg" alt="icon" width="840" height="357" loading="lazy" decoding="async" aria-hidden="true">
+</section>
+
+<!-- ================================================= -->
+<!--                    Extra Lesson                    -->
+<!-- ================================================== -->
+
+<section class="events-1511" id="Extra">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title-a">Extra Lessons</h2>
+            <p class="cs-text">
+                We provide you with extra reading paragraph and videos for your listening pratices. We hope you to improve your japanese skills.
+            </p>
+        </div>
+        <div class="cs-wrapper">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a href="https://yomujp.com/wagashi/" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <source media="(max-width: 600px)"
+                                        src="../images/forLessons/forExtra/r1.png">
+                                <source media="(min-width: 601px)"
+                                        src="../images/forLessons/forExtra/r1.png">
+                                <img decoding="async"
+                                        src="../images/forLessons/forExtra/r1.png"
+                                        alt="person" width="277" height="197" aria-hidden="true">
+                            </picture>
+                            <svg class="cs-mask" width="369" height="249" viewBox="0 0 369 249" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                    <g clip-path="url(#clip0_3335_6487)">
+                                    <path
+                                            d="M369 249V105.57H364.72L360.02 177.28L350.1 221.22L338.48 233.69L294.54 231.71L227.65 231.14L159.67 232.48L102.92 238.23L43.73 243.79L31 238.99L24.33 229L8.32 177.28L5.69 111.52L0 110.67V249H369Z"
+                                            fill="var(--maskBG)" />
+                                    <path
+                                            d="M0 0H369V114.64L364.64 113.67L364.72 77.5L356.91 50.01L348.69 27.11L329.08 10.47L296.81 4.93L28.9 9.69L21.28 14.57L15.61 25.63L4 124.51H0V0Z"
+                                            fill="var(--maskBG)" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M366 4H4V245H366V4ZM31 239C-4.86 193.71 3.34 85.57 14 31C17.78 11.59 25.37 8.61 42 8C107.73 5.59 193.2 4.66 300 5C325.79 5.1 347.16 14.21 356 43C370.28 89.64 364.08 137.32 358.09 183.32L358 184C356.03 199.42 352.41 212.38 347 224C343.96 230.49 339.5 233.58 333 233C234.49 224.39 139.41 232.28 42 244C39.88 244.27 37.99 243.86 36 243C34.01 242.14 32.41 240.79 31 239Z"
+                                            fill="var(--maskBG)" />
+                                    <path
+                                            d="M13.9996 30.9899C9.37956 54.6199 5.22956 88.2999 4.90956 122.57C4.49956 167.43 10.6696 213.31 30.9996 238.99C32.4096 240.78 34.0096 242.13 35.9996 242.99C37.9896 243.85 39.8796 244.26 41.9996 243.99C139.42 232.27 234.49 224.38 333 232.99C339.5 233.57 343.96 230.48 347 223.99C352.41 212.37 356.02 199.41 358 183.99C364.01 137.78 370.35 89.8599 356 42.9899C347.16 14.1999 325.79 5.08989 300 4.98989C193.2 4.64989 107.73 5.57989 41.9996 7.98989C25.3696 8.59989 17.7796 11.5799 13.9996 30.9899Z"
+                                            stroke="var(--maskBorder)" stroke-width="8" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_3335_6487-1511">
+                                        <rect width="369" height="249" fill="var(--maskBG)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="cs-date">Doc <strong>1</strong></span>
+                        </div>
+                        <div class="cs-info">
+                            <span class="cs-tag">N2</span>
+                            <h3 class="cs-h3">おいしいお店「和菓子：お持ち帰り」</h3>
+                            <span class="cs-time">
+                                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-clock.svg" alt="icon" width="24" height="24" loading="lazy" decoding="async">
+                                30mins
+                            </span>
+                            <span class="cs-place">
+                                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-pin.svg" alt="icon" width="24" height="24" loading="lazy" decoding="async">
+                                日本
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="https://www.youtube.com/watch?v=7r6MZ7lQvuE" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <source media="(max-width: 600px)"
+                                        src="../images/forLessons/forExtra/video1.png">
+                                <source media="(min-width: 601px)"
+                                        src="../images/forLessons/forExtra/video1.png">
+                                <img decoding="async"
+                                        src="../images/forLessons/forExtra/video1.png"
+                                        alt="person" width="277" height="197" aria-hidden="true">
+                            </picture>
+                                <svg class="cs-mask" width="369" height="249" viewBox="0 0 369 249" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                <g clip-path="url(#clip0_3335_6487)">
+                                <path
+                                        d="M369 249V105.57H364.72L360.02 177.28L350.1 221.22L338.48 233.69L294.54 231.71L227.65 231.14L159.67 232.48L102.92 238.23L43.73 243.79L31 238.99L24.33 229L8.32 177.28L5.69 111.52L0 110.67V249H369Z"
+                                        fill="var(--maskBG)" />
+                                <path
+                                        d="M0 0H369V114.64L364.64 113.67L364.72 77.5L356.91 50.01L348.69 27.11L329.08 10.47L296.81 4.93L28.9 9.69L21.28 14.57L15.61 25.63L4 124.51H0V0Z"
+                                        fill="var(--maskBG)" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M366 4H4V245H366V4ZM31 239C-4.86 193.71 3.34 85.57 14 31C17.78 11.59 25.37 8.61 42 8C107.73 5.59 193.2 4.66 300 5C325.79 5.1 347.16 14.21 356 43C370.28 89.64 364.08 137.32 358.09 183.32L358 184C356.03 199.42 352.41 212.38 347 224C343.96 230.49 339.5 233.58 333 233C234.49 224.39 139.41 232.28 42 244C39.88 244.27 37.99 243.86 36 243C34.01 242.14 32.41 240.79 31 239Z"
+                                        fill="var(--maskBG)" />
+                                <path
+                                        d="M13.9996 30.9899C9.37956 54.6199 5.22956 88.2999 4.90956 122.57C4.49956 167.43 10.6696 213.31 30.9996 238.99C32.4096 240.78 34.0096 242.13 35.9996 242.99C37.9896 243.85 39.8796 244.26 41.9996 243.99C139.42 232.27 234.49 224.38 333 232.99C339.5 233.57 343.96 230.48 347 223.99C352.41 212.37 356.02 199.41 358 183.99C364.01 137.78 370.35 89.8599 356 42.9899C347.16 14.1999 325.79 5.08989 300 4.98989C193.2 4.64989 107.73 5.57989 41.9996 7.98989C25.3696 8.59989 17.7796 11.5799 13.9996 30.9899Z"
+                                        stroke="var(--maskBorder)" stroke-width="8" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_3335_6487-1511">
+                                    <rect width="369" height="249" fill="var(--maskBG)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                            <span class="cs-date">video <strong>1</strong></span>
+                        </div>
+                        <div class="cs-info">
+                            <span class="cs-tag">(N3-N2)</span>
+                            <h3 class="cs-h3">YUYU日本語を始めた理由</h3>
+                            <span class="cs-time">
+                                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-clock.svg" alt="icon" width="24" height="24" loading="lazy" decoding="async">
+                                34 mins
+                            </span>
+                            <span class="cs-place">
+                                <img class="cs-icon" src="../images/forLessons/forExtra/youtube.png" alt="icon" width="24" height="24" loading="lazy" decoding="async">
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="https://hianime.to/watch/wolf-children-51?ep=57918" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <source media="(max-width: 600px)"
+                                        src="../images//forLessons/forExtra/wolfChildren.jpg">
+                                <source media="(min-width: 601px)"
+                                        src="../images//forLessons/forExtra/wolfChildren.jpg">
+                                <img decoding="async"
+                                        src="../images//forLessons/forExtra/wolfChildren.jpg"
+                                        alt="person" width="277" height="197" aria-hidden="true">
+                            </picture>
+                            <svg class="cs-mask" width="369" height="249" viewBox="0 0 369 249" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                    <g clip-path="url(#clip0_3335_6487)">
+                                    <path
+                                            d="M369 249V105.57H364.72L360.02 177.28L350.1 221.22L338.48 233.69L294.54 231.71L227.65 231.14L159.67 232.48L102.92 238.23L43.73 243.79L31 238.99L24.33 229L8.32 177.28L5.69 111.52L0 110.67V249H369Z"
+                                            fill="var(--maskBG)" />
+                                    <path
+                                            d="M0 0H369V114.64L364.64 113.67L364.72 77.5L356.91 50.01L348.69 27.11L329.08 10.47L296.81 4.93L28.9 9.69L21.28 14.57L15.61 25.63L4 124.51H0V0Z"
+                                            fill="var(--maskBG)" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M366 4H4V245H366V4ZM31 239C-4.86 193.71 3.34 85.57 14 31C17.78 11.59 25.37 8.61 42 8C107.73 5.59 193.2 4.66 300 5C325.79 5.1 347.16 14.21 356 43C370.28 89.64 364.08 137.32 358.09 183.32L358 184C356.03 199.42 352.41 212.38 347 224C343.96 230.49 339.5 233.58 333 233C234.49 224.39 139.41 232.28 42 244C39.88 244.27 37.99 243.86 36 243C34.01 242.14 32.41 240.79 31 239Z"
+                                            fill="var(--maskBG)" />
+                                    <path
+                                            d="M13.9996 30.9899C9.37956 54.6199 5.22956 88.2999 4.90956 122.57C4.49956 167.43 10.6696 213.31 30.9996 238.99C32.4096 240.78 34.0096 242.13 35.9996 242.99C37.9896 243.85 39.8796 244.26 41.9996 243.99C139.42 232.27 234.49 224.38 333 232.99C339.5 233.57 343.96 230.48 347 223.99C352.41 212.37 356.02 199.41 358 183.99C364.01 137.78 370.35 89.8599 356 42.9899C347.16 14.1999 325.79 5.08989 300 4.98989C193.2 4.64989 107.73 5.57989 41.9996 7.98989C25.3696 8.59989 17.7796 11.5799 13.9996 30.9899Z"
+                                            stroke="var(--maskBorder)" stroke-width="8" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_3335_6487-1511">
+                                        <rect width="369" height="249" fill="var(--maskBG)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="cs-date">anime </span>
+                        </div>
+                        <div class="cs-info">
+                            <span class="cs-tag">Entertain</span>
+                            <h3 class="cs-h3">Take a break with our </h3>
+                            <h3 class="cs-h3">ecommended japanese anime.</h3>
+                            <span class="cs-time">
+                                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-clock.svg" alt="icon" width="24" height="24" loading="lazy" decoding="async">
+                                2 hours
+                            </span>                          
+                            <span class="cs-place">
+                                <img class="cs-icon" src="../images/forLessons/forExtra/movie.png" alt="icon" width="24" height="24" loading="lazy" decoding="async">
+                            </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+           
+        </div>
+    </div>
+    <!--Top Right Blob-->
+    <svg class="cs-floater1" width="700" height="718" viewBox="0 0 700 718" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M575.372 95.8714C540.48 67.428 475.128 75.7133 408.812 57.679C342.834 39.0567 276.464 -5.99223 223.034 1.85967C170.192 10.0516 130.124 71.2785 94.2294 131.618C57.872 192.082 25.6359 252.073 10.5877 321.745C-5.04749 391.077 -3.85739 469.133 24.699 540.548C53.3797 612.427 109.82 677.97 179.299 704.108C248.654 729.781 331.925 716.892 396.291 683.235C460.781 650.042 506.409 596.145 563.164 552.593C619.582 509.629 686.548 477.821 697.904 429.527C708.921 381.82 663.651 318.289 639.397 253.678C614.804 189.655 610.264 124.315 575.372 95.8714Z" fill="var(--secondary)"/>
+    </svg>
+    <!--Bottom Left Blob-->
+    <svg class="cs-floater2" width="700" height="694" viewBox="0 0 700 694" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.54245 488.517C-9.90088 447.452 15.0164 386.471 14.7604 317.747C13.849 249.198 -12.4872 173.43 8.92583 123.853C30.5153 74.9308 100.026 52.0753 167.6 33.0207C235.414 13.5513 301.703 -2.05956 372.896 1.43741C443.913 4.27944 519.001 25.6315 580.592 71.6983C642.598 118.005 691.3 189.487 698.565 263.363C705.413 336.999 671.41 414.097 622.242 467.558C573.489 521.26 509.619 551.384 452.862 594.933C396.759 638.308 348.703 694.761 299.115 693.23C250.183 691.524 200.533 631.354 144.401 591.203C88.9242 550.878 26.9858 529.582 8.54245 488.517Z" fill="var(--primary)"/>
+    </svg>
+</section>
+
+<!-- =================================== -->
+<!--                About                -->
+<!-- =================================== -->
+
+<section id="meet-team-220">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper-a">About Us</span>
+            
+            <p class="cs-text">Welcome to Learn Japanese! Our mission is to provide comprehensive and engaging lessons on vocabulary, kanji, grammar, reading, and listening for learners at all levels.</p>
+            <span class="cs-topper">Our Story</span>
+            <p class="cs-text">Learn Japanese was founded in 2024 with the goal of making language learning accessible and enjoyable for everyone. Over the years, we have grown and evolved, adding new features and resources to better serve our community.</p>
+        </div>
+
+        <span class="cs-topper-team">Meet the Team</span>
+        <ul class="cs-card-group">            
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="../images/founder.png" alt="portrait" width="275" height="132">
+                </picture>
+                <span class="cs-name">Sheng Cai'er</span>
+                <span class="cs-job-title">Founder</span>
+                <span class="cs-text-team">Sheng Cai'er, Long Hao Chen's girlfriend work at Learn Japanese site for founder Profile.</span>
+                <!-- Social Flexbox -->
+                <div class="cs-social">
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/twitter.svg" alt="twitter" width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/linkedin.svg" alt="linkedin" width="17" height="16">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="../images/chatGpt.png" alt="portrait" width="275" height="132">
+                </picture>
+                <span class="cs-name">ChatGPT</span>
+                <span class="cs-job-title">Assistant</span>
+                <span class="cs-text-team">Assisted the coder in many aspects and helped the coder free from Css conflics and adivices for contentes.</span>
+                <!-- Social Flexbox -->
+                <div class="cs-social">
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/twitter.svg" alt="twitter" width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/linkedin.svg" alt="linkedin" width="17" height="16">
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="cs-content">
+            <span class="cs-topper">Our Values</span>
+            <p class="cs-text">We believe in inclusivity, accessibility, and the power of education to transform lives. Our vision is to create a world where language learning is fun, engaging, and within reach for everyone.</p>
+
+            <span class="cs-topper-c" id="contact">Contact Us</span>
+            <p class="cs-text-c">If you have any questions or feedback, feel free to reach out to us at <a href="mailto:contact@yoursite.com">contact@learnjapanese.com</a></p>
+            
+            <span class="cs-topper-c">Join Our Community</span>
+            <p class="cs-text-c">Subscribe to our newsletter and follow us on social media to stay updated with the latest lessons and resources.</p>
+            
+        </div>
+                
+    </div>
+</section>
+      
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-107">
+    <div class="cs-container">
+        <ul class="cs-ul">
+            <li class="cs-li cs-copyright">
+                © 2024 Copyright
+            </li>
+            <li class="cs-li">
+                <a href="#hero-229" class="cs-link">Home</a>
+            </li>
+            <li class="cs-li">
+                <a href="#meet-team-220" class="cs-link">About</a>
+            </li>
+            
+            <li class="cs-li">
+                <a href="#contact" class="cs-link">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+        
+<script src="../JS/index.js"></script>
+                             
+</body>
+</html>
